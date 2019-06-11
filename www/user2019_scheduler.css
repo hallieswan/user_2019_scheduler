@@ -1,0 +1,19 @@
+.right-align{
+    float:right;
+}
+.action-button {
+    border-color: transparent;
+}
+.action-button:hover {
+    border-color:transparent;
+    background-color: white;
+}
+.fa-check-circle:hover {
+    color: #a6dc89;
+}
+.fa-times-circle:hover {
+    color: #f17677;
+}
+.fa-times {
+    color: gray;
+}
