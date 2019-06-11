@@ -123,7 +123,7 @@ create_calendar_plot <- function(df) {
               panel.grid.major.y = element_line(color = "black")) +
         labs(x = NULL, y = "Hour CEST") +
         guides(color = guide_legend(override.aes = list(size=5),
-                                    nrow = 2, byrow = TRUE)) +
+                                    nrow = 3, byrow = TRUE)) +
         scale_y_reverse(breaks = hour_breaks,
                         labels = paste0(hour_breaks, ":00"),
                         limits = c(max(hour_breaks), min(hour_breaks))) +
@@ -218,8 +218,8 @@ ui_create_controls <- function() {
                selectInput("date", "Conference Date", choices = conf_days)),
         column(width = 4,
                helpText("Add events to Google Calendar by downloading a csv of events", 
-                        "and following instructions here:",
-                        a("https://support.google.com/calendar/answer/37118",
+                        "and following instructions ",
+                        a("here",
                           href = "https://support.google.com/calendar/answer/37118", target = "_blank"),
                         "Note: currently, the events will be added using your local timezone.", 
                         "See this workaround ", 
