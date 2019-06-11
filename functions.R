@@ -16,7 +16,7 @@ scrape_user_talks <- function(url, days) {
             mutate(description = lead(description)) %>%
             filter(rep(c(TRUE, FALSE), times = nrow(.)/2)) %>%
             mutate(start_time = time,
-                   day = as.POSIXct(day, format = "%Y%m%d", tz = "Europe/Paris")) %>%
+                   day = as.POSIXct(day, format = "%Y%m%d")) %>%
             arrange(day, room, start_time) %>%
             group_by(day, room) %>%
             mutate(end_time = lead(start_time),
@@ -27,8 +27,7 @@ scrape_user_talks <- function(url, days) {
                    )) %>%
             mutate_at(vars(ends_with("_time")), 
                       list(~as.POSIXct(paste0(day, .), 
-                                       format = "%Y-%m-%d%H:%M", 
-                                       tz = "Europe/Paris"))) %>%
+                                       format = "%Y-%m-%d%H:%M"))) %>%
             mutate(
                 # give some time for a passing period
                 # time needs to be in seconds
