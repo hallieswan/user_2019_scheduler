@@ -105,7 +105,7 @@ create_calendar_plot <- function(df) {
         ggplot(aes(y = start_hour, yend = end_hour, x = 0, xend = 0,
                    text = Description)) +
         facet_grid(.~room, drop = FALSE) +
-        geom_segment(size = 65, aes(color = session_category)) +
+        geom_segment(size = 70, aes(color = session_category)) +
         geom_text(aes(label = str_wrap(label, 25), 
                       y = (end_hour - start_hour)/2 + start_hour),
                   color = df$text_color,
@@ -196,7 +196,7 @@ ui_create_header <- function() {
                      target = "_blank"),
                    HTML("&emsp;&bull;&emsp;"),
                    icon("table"), 
-                   "See original data: ", 
+                   "Original data: ", 
                    a("http://www.user2019.fr/talk_schedule/", 
                      href = "http://www.user2019.fr/talk_schedule/",
                      target = "_blank")
@@ -209,7 +209,7 @@ ui_create_controls <- function() {
         column(width = 4, 
                helpText("Toggle between all events and events you have added ", 
                         "to your calendar. Add events by clicking on the event, ",
-                        "and then clicking the check in the upper-right corner of the modal."),
+                        "and then clicking the check on the bottom of the modal."),
                switchInput("calendar_toggle", value = TRUE, 
                            onLabel = "View all events", offLabel = "View my events",
                            width = 400)),
@@ -218,9 +218,14 @@ ui_create_controls <- function() {
                selectInput("date", "Conference Date", choices = conf_days)),
         column(width = 4,
                helpText("Add events to Google Calendar by downloading a csv of events", 
-                        "and then following instructions here:",
+                        "and following instructions here:",
                         a("https://support.google.com/calendar/answer/37118",
-                          href = "https://support.google.com/calendar/answer/37118", target = "_blank")),
+                          href = "https://support.google.com/calendar/answer/37118", target = "_blank"),
+                        "Note: currently, the events will be added using your local timezone.", 
+                        "See this workaround ", 
+                        a("here", 
+                          href = "https://support.google.com/calendar/forum/AAAAd3GaXpENLOFg39fyTI/?hl=en&gpf=%23!topic%2Fcalendar%2FNLOFg39fyTI%3Bcontext-place%3Dtopicsearchin%2Fcalendar%2Fauthorid%243AAPn2wQfIvhxLykKUdbcLocI1U82dK2ks-KRC8BEGgAs7naF8RuDFsSk8vXlsm6fWheh4uq6GaWSk%257Csort%3Adate%257Cspell%3Afalse", 
+                          target = "_blank")),
                downloadButton("dl_your_cal", "Your Events"),
                downloadButton("dl_full_cal", "All Events"))
     )
