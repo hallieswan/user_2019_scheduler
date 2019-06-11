@@ -105,7 +105,7 @@ create_calendar_plot <- function(df) {
         ggplot(aes(y = start_hour, yend = end_hour, x = 0, xend = 0,
                    text = Description)) +
         facet_grid(.~room, drop = FALSE) +
-        geom_segment(size = 70, aes(color = session_category)) +
+        geom_segment(size = 80, aes(color = session_category)) +
         geom_text(aes(label = str_wrap(label, 25), 
                       y = (end_hour - start_hour)/2 + start_hour),
                   color = df$text_color,
@@ -192,7 +192,7 @@ ui_create_header <- function() {
                    HTML("&emsp;&bull;&emsp;"),
                    icon("code-branch"),
                    a("Fork me", 
-                     href = "https://github.com/hallieswan/?tab=repositories",
+                     href = "https://github.com/hallieswan/user_2019_scheduler",
                      target = "_blank"),
                    HTML("&emsp;&bull;&emsp;"),
                    icon("table"), 
