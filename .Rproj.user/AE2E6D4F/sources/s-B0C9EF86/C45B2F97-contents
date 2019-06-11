@@ -6,7 +6,7 @@ The user can add events to their calendar and then download a csv of the events.
 
 # Use the scheduler online
 
-The scheduler will be hosted here: [https://hallietheswan.com/shiny/user_2019_scheduler](https://hallietheswan.com/shiny/user_2019_scheduler).
+The scheduler will be hosted here: [https://hallietheswan.com/shiny/user_2019_scheduler](https://hallietheswan.com/shiny/sample-apps/user_2019_scheduler).
 
 # Use the scheduler locally
 

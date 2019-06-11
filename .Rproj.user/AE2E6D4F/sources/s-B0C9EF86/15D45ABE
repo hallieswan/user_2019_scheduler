@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1560241010848.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "15D45ABE",
+    "lastKnownWriteTime" : 1560241052,
+    "last_content_update" : 1560241052914,
+    "path" : "~/Desktop/hallie/user2019_scheduler/Global.R",
+    "project_path" : "Global.R",
+    "properties" : {
+        "cursorPosition" : "11,50",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
