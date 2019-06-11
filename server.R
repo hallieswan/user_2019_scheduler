@@ -80,7 +80,7 @@ function(input, output, session) {
     # ...your calendar
     output$dl_your_cal <- downloadHandler(
         filename = function() {
-            "user2019_full_calendar.csv"
+            "user2019_your_calendar.csv"
         },
         content = function(file) {
             df <- user_talks$cal %>%
@@ -92,7 +92,7 @@ function(input, output, session) {
     # ...full calendar
     output$dl_full_cal <- downloadHandler(
         filename = function() {
-            "user2019_your_calendar.csv"
+            "user2019_full_calendar.csv"
         },
         content = function(file) {
             df <- select(user_talks$cal, cal_cols)
