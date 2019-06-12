@@ -262,7 +262,7 @@ ui_create_controls <- function() {
                helpText("Add events to Google Calendar by downloading a csv of events", 
                         "and following instructions ",
                         a("here. ",
-                          href = "https://github.com/hallieswan/user_2019_scheduler", target = "_blank"),
+                          href = "https://github.com/hallieswan/user_2019_scheduler#add-events-to-your-google-calendar", target = "_blank"),
                         "Note: if you do not create a new calendar with CEST timezone, the events will ",
                         "be added using your local timezone."),
                downloadButton("dl_your_cal", "Your Events"),
